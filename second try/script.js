@@ -16,9 +16,10 @@ async function fetchProducts() {
 }
 
 function displayProducts(products) {
-    const container = document.getElementById('productList');
+    const container = document.getElementById('product-List');
     products.forEach(product => {
         const productElement = document.createElement('div');
+        productElement.classList.add('product'); 
         productElement.innerHTML = `
             <h2>${product.title}</h2>
             <img src="${product.thumbnail}" alt="${product.title}" />
@@ -28,5 +29,4 @@ function displayProducts(products) {
         container.appendChild(productElement);
     });
 }
-
 
