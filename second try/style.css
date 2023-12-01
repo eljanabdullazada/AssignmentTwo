@@ -79,11 +79,12 @@ body {
   color: #a2c579;
 }
 
-#bottom-footer .company-information *{
+.company-information *{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 
 #bottom-footer .company-information{
     margin: 0;
@@ -96,7 +97,7 @@ body {
     margin: 0;
   }
 
-#bottom-footer .company-name #company-name-info {
+.company-name #company-name-info {
   padding-bottom: 10px;
   display: flex;
   justify-content: center;
