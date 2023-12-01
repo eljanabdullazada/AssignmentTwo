@@ -75,8 +75,14 @@ body {
   background-color: #ffffdd;
   margin: 10px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   color: #a2c579;
+}
+
+#bottom-footer .company-information{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .company-information *{
