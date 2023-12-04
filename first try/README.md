@@ -1,2 +1,0 @@
-# AssignmentTwo
-Assignment2
