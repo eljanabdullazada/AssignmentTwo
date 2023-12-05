@@ -1,7 +1,7 @@
 const linkCardGrid = document.getElementById("link-card-grid");
 const loadMoreButton = document.getElementById("load-more-button");
 let page = 1;
-const postsPerPage = 5;
+const postsPerPage = 10;
 
 const loadLinks = async () => {
   const skip = (page - 1) * postsPerPage;
