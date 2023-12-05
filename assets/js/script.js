@@ -24,7 +24,8 @@ async function fetchProducts() {
 
 function displayProducts(products) {
   const container = document.getElementById("product-List");
-  container.innerHTML = ''; 
+  container.innerHTML = ''; // every time we filter products it must show only the ones we selected
+  //by setting inner html empty we get space to show filtered products only
 
   products.forEach((product) => {
     const productElement = document.createElement("div");
@@ -50,9 +51,9 @@ function displayProducts(products) {
 function setupSearch() {
   const searchInput = document.createElement('input');
   searchInput.setAttribute('type', 'text');
-  searchInput.setAttribute('placeholder', 'Search...');
+  searchInput.setAttribute('placeholder', 'Search');
   searchInput.addEventListener('input', handleSearch);
-  document.getElementById('top-header').appendChild(searchInput);
+  document.getElementById('search-filter').appendChild(searchInput);
 }
 
 function handleSearch() {
@@ -80,10 +81,10 @@ function setupCategoryFilter(categories) {
   });
 
   selectBox.addEventListener('change', handleCategoryFilter);
-  document.getElementById('top-header').appendChild(selectBox);
+  document.getElementById('search-filter').appendChild(selectBox);
 }
 
-// we use this to filter and get rid of same categories to make ure that we can show the user which categories exists in filter button
+// we use this to filter and get rid of same categories to make sure that we can show the user which categories exists in filter button
 function extractCategories(products) {
   return [...new Set(products.map(product => product.category))];
 }
