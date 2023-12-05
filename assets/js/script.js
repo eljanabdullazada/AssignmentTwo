@@ -46,6 +46,7 @@ function displayProducts(products) {
     `;
     container.appendChild(productElement);
   });
+  
 }
 
 function setupSearch() {
