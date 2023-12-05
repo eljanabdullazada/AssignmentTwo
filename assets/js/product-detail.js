@@ -13,20 +13,28 @@ async function fetchProductDetails(productId) {
 
   function displayProductDetails(product) {
     const productDetailsContainer = document.getElementById('product-details');
-  
+
     const productHtml = `
-      <h2>${product.title}</h2>
+      <h1>${product.title}</h1>
       <p>Description: ${product.description}</p>
-      <p>Price: $${product.price}</p>
-      <p>Discount: ${product.discountPercentage}%</p>
-      <p>Rating: ${product.rating}</p>
-      <p>Stock: ${product.stock}</p>
-      <p>Brand: ${product.brand}</p>
-      <p>Category: ${product.category}</p>
-      <img src="${product.thumbnail}" alt="${product.title}" style="max-width: 200px; height: auto;">
-      <h3>Product Images</h3>
-      <div id="product-images">
-        ${product.images.map(image => `<img src="${image}" alt="${product.title}">`).join('')}
+      <div class="container">
+
+      <div class="information">
+          <p>Price: $${product.price}</p>
+          <p>Discount: ${product.discountPercentage}%</p>
+          <p>Rating: ${product.rating}</p>
+          <p>Stock: ${product.stock}</p>
+          <p>Brand: ${product.brand}</p>
+          <p>Category: ${product.category}</p>
+      </div>
+
+      <div class="name-gallery">
+            <h3>Product Images</h3>
+            <div id="product-images">
+              ${product.images.map(image => `<img src="${image}" alt="${product.title}">`).join('')}
+            </div>
+      </div>
+      
       </div>
     `;
 

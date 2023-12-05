@@ -16,7 +16,9 @@ async function fetchProducts() {
 }
 
 function displayProducts(products) {
+  
   const container = document.getElementById("product-List");
+
   products.forEach((product) => {
     const productElement = document.createElement("div");
     productElement.classList.add("product");
